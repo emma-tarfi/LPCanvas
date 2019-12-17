@@ -9,7 +9,7 @@ class HelloController extends AbstractController {
 
     public function helloAction() {
         return $this->json([
-            'message' => 'Meme pas généré automatiquement :)',
+            'message' => 'Coucou !',
         ]);
     }
 
@@ -21,7 +21,7 @@ class HelloController extends AbstractController {
 
     public function putAction() {
         return $this->json([
-            'message' => 'Meme pas généré automatiquement :)',
+            'message' => 'Coucou encore !',
         ]);
     }
 }

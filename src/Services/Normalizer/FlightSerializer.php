@@ -38,6 +38,13 @@ class FlightSerializer implements ContextAwareNormalizerInterface {
      * @throws ExceptionInterface         Occurs for all the other cases of errors
      */
     public function normalize($flight, string $format = null, array $context = []) {
-        // TODO: Implement normalize() method.
+        return [
+            "id" => $flight->getId(),
+            "departure_airport" => $flight->getDepartureAirport(),
+            "arrival_airport" => $flight->getArrivalAirport(),
+            "departure_datetime" => $flight->getDepartureDatetime(),
+            "arrival_departure" => $flight->getArrivalDeparture(),
+            "main_pilot" => $flight->getMainPilot()
+        ];
     }
 }

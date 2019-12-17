@@ -31,3 +31,71 @@ user:
 userList:
   path: /user/list/
   controller: App\Controller\UserController::displayUserList
+
+airportList:
+  path: /airport
+  controller: App\Controller\AirportController::displayAirportList
+
+airportListId:
+  path: /airport/{id}
+  controller: App\Controller\AirportController::displayAirportList
+  requirements:
+    id: '\d+'
+
+airportListIdDelete:
+  path: /airport/{id}
+  controller: App\Controller\AirportController::displayAirportList
+  methods: DELETE
+  requirements:
+    id: '\d+'
+
+flightList:
+  path: /flight
+  controller: App\Controller\FlightController::displayFlightList
+
+flightListId:
+  path: /flight/{id}
+  controller: App\Controller\FlightController::displayFlightList
+  requirements:
+    id: '\d+'
+
+flightListIdDelete:
+  path: /flight/{id}
+  controller: App\Controller\FlightController::displayFlightList
+  methods: DELETE
+  requirements:
+    id: '\d+'
+
+pilotList:
+  path: /pilot
+  controller: App\Controller\PilotController::displayPilotList
+
+pilotListId:
+  path: /pilot/{id}
+  controller: App\Controller\PilotController::displayPilotList
+  requirements:
+    id: '\d+'
+
+pilotListIdDelete:
+  path: /pilot/{id}
+  controller: App\Controller\PilotController::displayPilotList
+  methods: DELETE
+  requirements:
+    id: '\d+'
+
+planeList:
+  path: /plane
+  controller: App\Controller\PlaneController::displayPlaneList
+
+planeListId:
+  path: /plane/{id}
+  controller: App\Controller\PlaneController::displayPlaneList
+  requirements:
+    id: '\d+'
+
+planeListIdDelete:
+  path: /plane/{id}
+  controller: App\Controller\PlaneController::displayPlaneList
+  methods: DELETE
+  requirements:
+    id: '\d+'

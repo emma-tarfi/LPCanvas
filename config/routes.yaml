@@ -1,3 +1,33 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+hello:
+  path: /hello
+  controller: App\Controller\HelloController::helloAction
+
+numberAction:
+  path: /numberAction/{number}
+  controller: App\Controller\HelloController::numberAction
+
+OnlyNumberAction:
+  path: /onlyNumberAction/{number}
+  controller: App\Controller\HelloController::onlyNumberAction
+  requirements:
+    number: '\d+'
+
+putAction:
+  path: /putAction
+  controller: App\Controller\HelloController::putAction
+  methods: PUT
+
+user:
+  path: /user/{lastName}/{firstName}
+  controller: App\Controller\UserController::displayUser
+  requirements:
+    lastName: '\w+'
+    firstName: '\w+'
+
+userList:
+  path: /user/list/
+  controller: App\Controller\UserController::displayUserList
